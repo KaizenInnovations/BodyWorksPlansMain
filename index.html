@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaizen Body Works - Transform Your Fitness Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+        }
+        
+        .brand-green {
+            background-color: #00BF63;
+        }
+        
+        .brand-green-hover:hover {
+            background-color: #00A055;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 191, 99, 0.2);
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(0, 191, 99, 0.3);
+        }
+        
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 191, 99, 0.5);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(0, 191, 99, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0, 191, 99, 0.1) 0%, transparent 50%);
+        }
+
+        /* Custom responsive utilities */
+        @media (max-width: 640px) {
+            .text-responsive-xl { font-size: 2.5rem; }
+            .text-responsive-lg { font-size: 1.5rem; }
+        }
+        
+        @media (min-width: 641px) and (max-width: 768px) {
+            .text-responsive-xl { font-size: 3.5rem; }
+            .text-responsive-lg { font-size: 2rem; }
+        }
+        
+        @media (min-width: 769px) {
+            .text-responsive-xl { font-size: 5rem; }
+            .text-responsive-lg { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+            <div class="mb-8">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-4 text-glow leading-tight">
+                    KAIZEN
+                </h1>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-6 leading-tight" style="color: #00BF63;">
+                    BODY WORKS
+                </h2>
+                <p class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-12 max-w-5xl mx-auto text-gray-300 leading-relaxed font-bold px-2 sm:px-4">
+                    Command Presence! Build a Body That Speaks Before You Do.
+                </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row lg:flex-row gap-4 sm:gap-6 justify-center items-stretch sm:items-center mb-16 px-2 sm:px-4 max-w-4xl mx-auto">
+                <button onclick="navigateToPlans('online')" class="brand-green brand-green-hover text-black px-4 sm:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 lg:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold transition-all duration-300 transform hover:scale-105 glow-effect flex-1 sm:flex-none sm:min-w-[180px] lg:min-w-[200px] xl:min-w-[220px]">
+                    Online Coaching
+                </button>
+                <button onclick="navigateToPlans('monthly')" class="brand-green brand-green-hover text-black px-4 sm:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 lg:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold transition-all duration-300 transform hover:scale-105 glow-effect flex-1 sm:flex-none sm:min-w-[180px] lg:min-w-[200px] xl:min-w-[220px] pulse-animation">
+                    Month to Month
+                </button>
+                <button onclick="navigateToPlans('full')" class="brand-green brand-green-hover text-black px-4 sm:px-6 lg:px-8 xl:px-10 py-3 sm:py-4 lg:py-5 rounded-lg text-base sm:text-lg lg:text-xl font-bold transition-all duration-300 transform hover:scale-105 glow-effect flex-1 sm:flex-none sm:min-w-[180px] lg:min-w-[200px] xl:min-w-[220px]">
+                    Paid in Full
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <!-- Refer a Friend Button -->
+                <div class="mb-6 sm:mb-8">
+                    <button onclick="navigateToPlans('refer')" class="bg-yellow-500 hover:bg-yellow-400 text-black px-8 sm:px-12 lg:px-16 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-bold transition-all duration-300 transform hover:scale-105 glow-effect w-full max-w-md mx-auto flex flex-col items-center">
+                        <span>Refer a Friend</span>
+                        <span class="text-sm font-normal mt-1 opacity-80">Get Rewarded</span>
+                    </button>
+                </div>
+                
+                <div class="text-gray-500">
+                    <p class="text-base sm:text-lg">&copy; 2025 Kaizen Body Works. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation function for training plan buttons and cards
+        function navigateToPlans(planType) {
+            const planNames = {
+                'online': 'Online Coaching',
+                'monthly': 'Month to Month Coaching', 
+                'full': 'Paid in Full Coaching',
+                'refer': 'Refer a Friend'
+            };
+            
+            alert(`Navigating to ${planNames[planType]} page. This will be replaced with actual navigation to your specific pages.`);
+            
+            // When you create the individual pages, replace the alert with:
+            // window.location.href = `${planType}-plans.html`;
+        }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97fdc6cab79ff03e',t:'MTc1Nzk5ODU3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
